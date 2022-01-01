@@ -5,4 +5,4 @@ def arguments(*args)
   ARGV.each { |argument| p argument }
 end
 
-arguments()
+arguments
