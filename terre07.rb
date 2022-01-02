@@ -3,7 +3,7 @@
 
 def string_length(string)
   count = 0
-  if string.class == NilClass || string.match?(/\d/) || ARGV.length > 0
+  if string.class == NilClass || string.match?(/\d/) || ARGV.length > 1
     p "erreur."
   else
     for i in 0..string.index(string[-1])

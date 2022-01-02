@@ -1,7 +1,7 @@
 # Créez un programme qui permet de déterminer si l’argument donné est un entier pair ou impair..
 
 def is_even(number)
-  if number.class == NilClass || number.match(/[a-z]/)
+  if number.class == NilClass || number.match(/[a-zA-Z]/)
     p 'Tu bluffes, Martoni'
   elsif number % 2 == 0
     p 'pair'
