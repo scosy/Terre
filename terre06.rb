@@ -1,5 +1,5 @@
 # Créez un programme qui affiche l’inverse de la chaîne de caractères donnée en argument.
-#split, map pour renvoyer l'index - 1
+
 def reverse_string(string)
   if string.class == NilClass || ARGV.length > 1
     p "Veuillez entrer une chaîne de caractères."
