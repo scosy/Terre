@@ -3,7 +3,7 @@
 def to_12h(time)
   hour = time.split(':')[0]
   minutes = time.split(':')[1]
-  if hour.to_i > 24 || hour.to_i < 0 || hour.match(/[a-zA-z]/) || minutes.to_i > 59 || minutes.to_i < 0
+  if hour.to_i > 24 || hour.to_i < 0 || hour.match(/[a-zA-Z]/) || minutes.to_i > 59 || minutes.to_i < 0
     p "erreur."
   else
     if hour.to_i == 0
