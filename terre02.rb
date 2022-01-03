@@ -2,7 +2,7 @@
 #peu importe le nombre d’arguments.
 
 def arguments(*args)
-  ARGV.each { |argument| p argument }
+  ARGV.each { |argument| puts argument }
 end
 
 arguments

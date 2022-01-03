@@ -5,15 +5,15 @@ def to_24h(time)
   minutes = time[0].split(':')[1]
   period = time[1]
   if hour.to_i > 24 || hour.to_i < 0 || hour.match(/[a-zB-LNOQ-Z]/) || minutes.to_i > 59 || minutes.to_i < 0 || !period 
-    p "erreur."
+    puts "erreur."
   else
     if period == "AM"
-      p "#{hour}:#{minutes}"
+      puts "#{hour}:#{minutes}"
     else
       if hour.to_i == 12
-        p "00:#{minutes}" 
+        puts "00:#{minutes}" 
       else
-        p "#{hour.to_i + 12}:#{minutes}" 
+        puts "#{hour.to_i + 12}:#{minutes}" 
       end
     end
   end

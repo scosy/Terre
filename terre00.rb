@@ -3,7 +3,7 @@
 
 def alphabet
   for letter in "a".."z"
-    p letter
+    puts letter
   end
 end
 

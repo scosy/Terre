@@ -2,22 +2,22 @@
 
 def middle_value(n1, n2, n3)
   if n1 == n2 || n1 == n3 || n2 == n3 || ARGV.map{ |e| e.match?(/[a-zA-Z]/)}.any? || ARGV.length > 3
-    p "erreur"
+    puts "erreur"
   else
     if n1 > n2
       if n1 > n3
         if n2 > n3
-          p n2
+          puts n2
         else
-          p n3
+          puts n3
         end
       else 
-        p n1
+        puts n1
       end
     elsif n1 > n3
-      p n1
+      puts n1
     else
-      (n2 > n3) ? (p n3) : (p n2)
+      (n2 > n3) ? (puts n3) : (puts n2)
     end
   end
 end

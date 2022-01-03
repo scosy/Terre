@@ -2,11 +2,11 @@
 
 def is_even(number)
   if number.class == NilClass || number.match(/[a-zA-Z]/)
-    p 'Tu bluffes, Martoni'
-  elsif number % 2 == 0
-    p 'pair'
-  elsif number % 2 != 0
-    p 'impair'
+    puts 'Tu bluffes, Martoni'
+  elsif number.to_i % 2 == 0
+    puts 'pair'
+  elsif number.to_i % 2 != 0
+    puts 'impair'
   end
 end
 

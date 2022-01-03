@@ -3,9 +3,9 @@
 
 def exponential(number, exponent)
   if number.class == NilClass || number.match?(/[a-zA-Z]/) || ARGV.length > 2 || ARGV[1].match?(/\W/)
-    p "erreur."
+    puts "erreur."
   else
-    p number.to_i**exponent.to_i
+    puts number.to_i**exponent.to_i
   end
 end
 

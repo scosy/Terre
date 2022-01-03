@@ -2,9 +2,11 @@
 
 def square_root(number)
   if number.class == NilClass || number.match?(/[a-zA-Z]/) || ARGV.length > 1
-    p "erreur."
+    puts "erreur."
   else
-    p Integer.sqrt(number.to_i)
+    for i in 0..(number.to_i)
+      (i * i == number.to_i) ? (puts i; exit) : ()
+    end
   end
 end
 

@@ -4,12 +4,12 @@
 def string_length(string)
   count = 0
   if string.class == NilClass || string.match?(/\d/) || ARGV.length > 1
-    p "erreur."
+    puts "erreur."
   else
-    for i in 0..string.index(string[-1])
+    for i in 0..string.length - 1
       count += 1
     end
-    p count
+    puts count
   end
 end
 

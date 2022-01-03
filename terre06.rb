@@ -2,9 +2,9 @@
 
 def reverse_string(string)
   if string.class == NilClass || ARGV.length > 1
-    p "Veuillez entrer une chaîne de caractères."
+    puts "Veuillez entrer une chaîne de caractères."
   else
-    p string.split(//).map.with_index { |letter, index| string[string.length - 1 - index] }.join
+    puts string.split(//).map.with_index { |letter, index| string[string.length - 1 - index] }.join
   end
   end
 
