@@ -2,9 +2,8 @@
 # en lettres minuscules suivi d’un retour à la ligne.
 
 def alphabet
-  for letter in "a".."z"
-    puts letter
-  end
+  alphabet = *("a".."z")
+  alphabet.join(" ")
 end
 
-alphabet
+puts alphabet
