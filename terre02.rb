@@ -2,7 +2,9 @@
 #peu importe le nombre d’arguments.
 
 def arguments(*args)
-  ARGV.each { |argument| puts argument }
+  ARGV.each { |argument| argument }
 end
 
-arguments
+(puts "error"; exit) if ARGV.length === 0
+
+puts arguments
