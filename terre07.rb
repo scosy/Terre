@@ -1,16 +1,19 @@
 # Créez un programme qui affiche le nombre de caractères
 # d’une chaîne de caractères passée en argument.
 
-def string_length(string)
-  count = 0
-  if string.class == NilClass || string.match?(/\d/) || ARGV.length > 1
-    puts "erreur."
-  else
-    for i in 0..string.length - 1
-      count += 1
-    end
-    puts count
-  end
+def only_numbers(str)
+  check = true
+  str.each_char { |c| c.match?(/[a-zA-Z]/) ? check = false : () }
+  check
 end
 
-string_length(ARGV[0])
+def string_length(string)
+  count = 0
+    string.each_char { |c| count += 1 }
+    count
+end
+
+(puts "error"; exit) if ARGV.size != 1
+(puts "error"; exit) if only_numbers(ARGV[0])
+
+puts string_length(ARGV[0])
