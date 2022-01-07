@@ -3,21 +3,18 @@
 def to_24h(time)
   hour = time[0].split(':')[0]
   minutes = time[0].split(':')[1]
-  period = time[1]
-  if hour.to_i > 24 || hour.to_i < 0 || hour.match(/[a-zB-LNOQ-Z]/) || minutes.to_i > 59 || minutes.to_i < 0 || !period 
-    puts "erreur."
-  else
+  period = minutes.slice!(2, 3)
     if period == "AM"
-      puts "#{hour}:#{minutes}"
+      (hour == "12") ? "00:#{minutes}" : "#{hour}:#{minutes}" 
     else
-      if hour.to_i == 12
-        puts "00:#{minutes}" 
-      else
-        puts "#{hour.to_i + 12}:#{minutes}" 
-      end
+      (hour.to_i == 12) ? "#{hour}:#{minutes}" : "#{hour.to_i + 12}:#{minutes}" 
     end
-  end
 end
 
 
-to_24h(ARGV)
+(puts "error"; exit) if ARGV[0].split(':')[0] > "12"
+(puts "error"; exit) if ARGV[0].split(':')[1] > "59"
+(puts "error"; exit) unless ARGV[0].include?('M')
+(puts "error"; exit) if ARGV.size != 1
+
+puts to_24h(ARGV)
