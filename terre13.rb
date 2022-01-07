@@ -1,25 +1,21 @@
 # Créez un programme qui prend en paramètre trois entiers et affiche la valeur du milieu.
 
+def contains_letter(str)
+  str.match?(/[a-zA-Z]/)
+end
+
 def middle_value(n1, n2, n3)
-  if n1 == n2 || n1 == n3 || n2 == n3 || ARGV.map{ |e| e.match?(/[a-zA-Z]/)}.any? || ARGV.length > 3
-    puts "erreur"
+  case n1
+  when ARGV.max
+    n2 > n3 ? n3 : n2
+  when ARGV.min
+    n2 < n3 ? n2 : n3
   else
-    if n1 > n2
-      if n1 > n3
-        if n2 > n3
-          puts n2
-        else
-          puts n3
-        end
-      else 
-        puts n1
-      end
-    elsif n1 > n3
-      puts n1
-    else
-      (n2 > n3) ? (puts n3) : (puts n2)
-    end
+    n1
   end
 end
 
-middle_value(ARGV[0].to_i, ARGV[1].to_i, ARGV[2].to_i)
+(puts "error"; exit) if ARGV.size != 3
+(puts "error"; exit) if contains_letter(ARGV[0])
+
+puts middle_value(ARGV[0], ARGV[1], ARGV[2])
