@@ -7,7 +7,7 @@ end
 def prime_number(number)
   prime= ["2", "3", "5"]
     if (!prime.include?(number)) && (number.to_i == 1 || number.to_i % 2 == 0 || number.to_i % 3 == 0 || number.to_i % 5 == 0 )
-      "Non #{number} n'est pas un nombre premier."
+      "Non, #{number} n'est pas un nombre premier."
     else
       "Oui, #{number} est un nombre premier."
     end

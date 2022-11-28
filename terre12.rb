@@ -12,9 +12,9 @@ def to_24h(time)
 end
 
 
+(puts "error"; exit) if ARGV.size != 1
+(puts "error"; exit) unless ARGV[0].include?('M')
 (puts "error"; exit) if ARGV[0].split(':')[0] > "12"
 (puts "error"; exit) if ARGV[0].split(':')[1] > "59"
-(puts "error"; exit) unless ARGV[0].include?('M')
-(puts "error"; exit) if ARGV.size != 1
 
 puts to_24h(ARGV)

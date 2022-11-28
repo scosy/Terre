@@ -3,7 +3,7 @@
 
 def alphabet
   alphabet = *("a".."z")
-  alphabet.join(" ")
+  alphabet.join("")
 end
 
 puts alphabet

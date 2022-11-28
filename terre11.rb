@@ -14,9 +14,10 @@ def to_12h(time)
   end
 end
 
+(puts "error"; exit) if ARGV.size != 1
+(puts "error"; exit) unless ARGV[0].match?(/^[0-9]{2}:[0-9]{2}$/)
 (puts "error"; exit) if ARGV[0].split(':')[0] > "24"
 (puts "error"; exit) if ARGV[0].split(':')[1] > "59"
-(puts "error"; exit) if ARGV.size != 1
 
 
 

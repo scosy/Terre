@@ -12,7 +12,7 @@ end
 
 
 (puts "error"; exit) if ARGV.size != 1
-(puts "error"; exit) if !is_number(ARGV[0])
+(puts "error"; exit) unless is_number(ARGV[0])
 (puts "error"; exit) if ARGV[0] <= "0"
 
 square_root(ARGV[0])

@@ -7,11 +7,11 @@ end
 
 def alphabet_from_n(n)
     alphabet = *(n.."z") 
-    alphabet.join(" ")
+    alphabet.join("")
 end
 
 (puts "error"; exit) if ARGV.size != 1 || ARGV[0].size != 1
-(puts "error"; exit) if !letter_only(ARGV[0])
+(puts "error"; exit) unless letter_only(ARGV[0])
 
 puts alphabet_from_n(ARGV[0])
 

@@ -7,12 +7,13 @@ end
 def divide(n1, n2)
   result = n1 / n2
   rest = n1 % n2
-  "résultat: #{result} \nreste: #{rest}"
+  "Résultat: #{result} \nReste: #{rest}"
 end
 
 (puts "error"; exit) if ARGV.size != 2
-(puts "error"; exit) if !are_number(ARGV[0], ARGV[1])
+(puts "error"; exit) unless are_number(ARGV[0], ARGV[1])
 (puts "error"; exit) if ARGV[1] == "0"
+(puts "error"; exit) if ARGV[1] > ARGV[0]
 
 
 puts divide(ARGV[0].to_i, ARGV[1].to_i)

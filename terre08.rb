@@ -11,7 +11,7 @@ end
 
 
 (puts "error"; exit) if ARGV.size != 2
-(puts "error"; exit) if !are_number(ARGV[0], ARGV[1])
+(puts "error"; exit) unless are_number(ARGV[0], ARGV[1])
 (puts "error"; exit) if ARGV[1] <= "0"
 
 
